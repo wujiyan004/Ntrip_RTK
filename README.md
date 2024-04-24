@@ -35,9 +35,9 @@ sudo apt-get install libboost${BOOST_VERSION}-dev   #选择适合的版本
 
 ~~~shell
 mkdir -p ~/catkin_ws/src
-cd ~/lslidar_ws/src
+cd ~/catkin_ws/src
 把驱动压缩包拷贝到src目录下，并解压
-cd ~/lslidar_ws
+cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
 rosrun Ntrip_ROS Ntrip_ROS #启动差分接受
