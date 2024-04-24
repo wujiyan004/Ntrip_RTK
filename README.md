@@ -52,19 +52,33 @@ rosrun Ntrip_ROS Ntrip_ROS #启动差分接受
 
 移动站配置：
 Log com2 gpybm ontime 0.2   //通过com2口输出GPYBM数据
+
 Interfacemode com2 auto auto on  //t通过com2口输入差分数据
+
 set imuaxestype 1             //设置K823内置的IMU设置K823芯片与车头朝向融合IMU
+
 INSCONTROL ENABLE       //使能IMU与RTK融合算法
+
 inscontrol enable              //使能IMU
+
 set smootheddr on             //设置融合算法轨迹平滑，防止突变
+
 set drtimeout 30                //设置融合超时
+
 set drconfig 0.4                 //设置两天线距离
+
 MAXVECLENERR 6            //设置模式配置
+
 RTKDYNAMICS FOOT          //设置RTK模式为低速行走模式
+
 RTKFIXHOLDTIME 10              //设置RTK差分超时
+
 RTKTIMEOUT 9                   //设置RTK超时
+
 RTKQUALITYLEVEL extra-safe        //设置RTK数据质量
+
 VECTORLENMODE 2             //设置RTK两组数据最大间隔距离米
+
 Saveconfig                       //保持以上设置，把配置写死在芯片，不写死，只生效一次下次不生效
  
 
@@ -72,15 +86,23 @@ Saveconfig                       //保持以上设置，把配置写死在芯片
 基站配置：
 
 freset                          恢复出厂设置
+
 Fix auto/position 经度 纬度 高程    设置基站坐标（注：设置auto为自动获取坐标，position为固定点坐标）
 
 log com1 rtcm1074b ontime 1 
+
 log com1 rtcm1124b ontime 1 
+
 log com1 rtcm1084b ontime 1 
+
 log com1 rtcm1094b ontime 1
+
 log com1 rtcm1005b ontime 5
+
 log com1 rtcm1033b ontime 10
+
 com com1 115200
+
 Saveconfig
 
   
