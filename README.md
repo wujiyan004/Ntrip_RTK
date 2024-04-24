@@ -40,7 +40,7 @@ cd ~/lslidar_ws/src
 cd ~/lslidar_ws
 catkin_make
 source devel/setup.bash
-rosrun Ntrip_ROS Ntrip_ROS #启动c16雷达
+rosrun Ntrip_ROS Ntrip_ROS #启动差分接受
 ~~~
 
 
