@@ -29,8 +29,8 @@
 #define QX_SERVER "203.107.45.154"
 #define QX_PORT 8002
 #define QX_MOUNT "AUTO"
-#define QX_USER "qxwfue008"
-#define QX_USERPASS "12cd52b"
+#define QX_USER "qxwfue12321"
+#define QX_USERPASS "123456"
 
 /* MCU SERIAL */
 #define SP_DEV "/dev/ttyUSB0"
