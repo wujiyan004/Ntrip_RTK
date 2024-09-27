@@ -10,6 +10,7 @@ project(RTK_ntrip)
 find_package(catkin REQUIRED COMPONENTS
   message_generation
   roscpp
+  K823_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -48,8 +49,6 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 # add_message_files(
 #   FILES
-#   Message1.msg
-#   Message2.msg
 # )
 
 ## Generate services in the 'srv' folder
@@ -133,7 +132,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
- add_executable(${PROJECT_NAME}_node src/RTK_ntrip.cpp src/RTK_ntrip.h)
+ add_executable(${PROJECT_NAME}_node src/RTK_ntrip.cpp )
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -203,6 +202,7 @@ include_directories(
 add_executable(RTK_ntrip
   src/RTK_ntrip.cpp
 )
+add_dependencies(RTK_ntrip K823_msgs_generate_messages_cpp)
 add_dependencies(RTK_ntrip ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(RTK_ntrip
   ${catkin_LIBRARIES}
