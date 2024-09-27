@@ -29,11 +29,12 @@
 #define QX_SERVER "203.107.45.154"
 #define QX_PORT 8002
 #define QX_MOUNT "AUTO"
-#define QX_USER "qxwfue12321"
-#define QX_USERPASS "123456"
+#define QX_USER "qxwfue008"
+#define QX_USERPASS "12cd52b"
 
 /* MCU SERIAL */
-#define SP_DEV "/dev/ttyUSB0"
+#define SP_DEV "/dev/ttyUSB5"
+
 
 typedef struct
 {
@@ -64,4 +65,5 @@ std::string intToHexString(int i);
 std::string ggats();
 std::string gen_gpgga(std::string lat, std::string lng, int status);
 bool startsWith(const std::string& fullString, const std::string& starting);
+
 #endif
